@@ -15,7 +15,9 @@
             <li><a href="contacts.html">КОНТАКТЫ</a></li>
         </ul>
         <ul class="user-nav">
-            <li class="basket">КОРЗИНА</li>
+            <li class="basket">
+                <a href="basket.html">КОРЗИНА</a>
+            </li>
         </ul>
     </nav>
     <h1>Магазин готовых товаров</h1>
@@ -23,7 +25,52 @@
 <main>
     <section class="filters">
         <h2 class="visually-hidden">Фильтр</h2>
- <!--filter-form-->
+        <form class="filter" method="get" action="#">
+            <fieldset>
+                <legend>СЕТКА:</legend>
+                <ul>
+                    <li class="filter-option">
+                        <input class="filter-input filter-input-radio" type="radio" name="cell" value="adaptive" id="adapt-cell" checked>
+                        <label for="adapt-cell">Адаптивная</label>
+                    </li>
+                    <li class="filter-option">
+                        <input class="filter-input filter-input-radio" type="radio" name="cell" value="fixed" id="fixed-cell">
+                        <label for="fixed-cell">Фиксированная</label>
+                    </li>
+                    <li class="filter-option">
+                        <input class="filter-input filter-input-radio" type="radio" name="cell" value="rubber" id="rubber-cell">
+                        <label for="rubber-cell">Резиновая</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Особенности:</legend>
+                <ul>
+                    <li class="filter-option">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="slider" id="slider-item" checked>
+                        <label for="slider-item">Слайдер</label>
+                    </li>
+                    <li class="filter-option">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="advantage-block" id="advantage-item">
+                        <label for="advantage-item">Блок преимуществ</label>
+                    </li>
+                    <li class="filter-option">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="news" id="news-item" checked>
+                        <label for="news-item">Новости</label>
+                    </li>
+                    <li class="filter-option">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="gallery" id="gallery-item">
+                        <label for="gallery-item">Галерея</label>
+                    </li>
+                    <li class="filter-option">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="basket" id="basket-item">
+                        <label for="basket-item">Корзина</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submit">Показать</button>
+        </form>
+
     </section>
     <section class="catalog">
         <h2 class="visually-hidden">Каталог.</h2>
@@ -90,7 +137,7 @@
         <p>NЁRDS DESIGN STUDIO</p>
         <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <p>тел. +7(812)275-75-75</p>
-        <button>НАПИШИТЕ НАМ</button>
+        <button type="button">НАПИШИТЕ НАМ</button>
     </section>
 </main>
 <footer>
@@ -100,5 +147,24 @@
     <p>Давайте дружить, это выгодно!</p>
     <p>Скидка 10% для друзей из социальных сетей.</p>
 </footer>
+<div class="contact-pop-up">
+    <h2>Напишите нам</h2>
+    <form class="callback" action="#" method="post">
+        <p class="callback-item">
+            <label for="name-item">Ваше имя:</label>
+            <input id="name-item" type="text" name="name" value="" placeholder="Имя Фамилия"/>
+        </p>
+        <p class="callback-item">
+            <label for="email-item">Ваш e-mail:</label>
+            <input id="email-item" type="text" name="e-mail" value="" placeholder="email@example.com"/>
+        </p>
+        <p class="callback-item">
+            <label for="text-item">Текст письма:</label>
+            <textarea id="text-item" name="text" placeholder="В свободной форме" rows="8" cols="100"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+        <button class="pop-up-close" type="button"></button>
+    </form>
+</div>
 </body>
 </html>
